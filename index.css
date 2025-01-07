@@ -1,0 +1,168 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+    background-image: url('https://cdn.wallpaper.tn/large/Beige-Striped-Wallpaper-116513.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    height: 100vh; /* Ensure full viewport height */
+}
+
+.navbar {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    background-color: #33333356;
+    padding: 10px 20px;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    z-index: 10;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+    font-size: 16px;
+    transition: color 0.3s;
+}
+
+.navbar a:hover {
+    color: #f4a261;
+}
+
+/* Header Section */
+.header {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #264653;
+    background-image: url('https://wallpapercave.com/wp/wp8427333.jpg');
+    background-size: cover;
+    color: white;
+    margin-top: 60px; /* Ensure content starts below fixed navbar */
+}
+
+/* Centered Homepage Content */
+.homepage-content {
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    justify-content: center; /* Center vertically */
+    align-items: center;    /* Center horizontally */
+    min-height: calc(100vh - 120px); /* Full viewport height minus navbar and footer */
+    text-align: center;
+}
+
+/* Profile Picture Styling */
+.homepage-picture img {
+    width: 200px; /* Adjust size as needed */
+    height: 200px; /* Match width for a perfect circle */
+    border-radius: 50%; /* Make the image circular */
+    border: 5px solid #f4a261; /* Add a circular border */
+    object-fit: cover; /* Ensure the image scales well */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Add a slight shadow */
+    margin-bottom: 20px; /* Add spacing between the picture and the audio player */
+}
+
+/* Audio Player Styling */
+.audio-player {
+    background-color: #264653;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    width: 300px;
+}
+
+audio {
+    width: 100%;
+    outline: none;
+}
+
+audio::-webkit-media-controls-panel {
+    background-color: #f4a261;
+    border-radius: 10px;
+}
+
+audio::-webkit-media-controls-play-button,
+audio::-webkit-media-controls-pause-button {
+    color: #264653;
+}
+
+audio::-webkit-media-controls-current-time-display,
+audio::-webkit-media-controls-time-remaining-display {
+    color: white;
+}
+
+.audio-container {
+    background-color: #264653; /* Matches theme color */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Adds a subtle shadow */
+    width: 300px;
+    margin-top: 20px;
+}
+
+audio {
+    width: 100%; /* Makes the audio controls span the container */
+    outline: none;
+    border: none;
+    background: none;
+}
+
+audio::-webkit-media-controls-panel {
+    background-color: #f4a261; /* Matches your theme color */
+    border-radius: 10px;
+}
+
+audio::-webkit-media-controls-play-button,
+audio::-webkit-media-controls-pause-button {
+    color: #264653; /* Custom color for play/pause buttons */
+}
+
+audio::-webkit-media-controls-current-time-display,
+audio::-webkit-media-controls-time-remaining-display {
+    color: white; /* Matches your theme for text visibility */
+}
+
+
+/* Footer Section */
+footer {
+    background-color: #333333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+.date-time {
+    font-size: 14px;
+    font-weight: 300;
+    color: #f4a261;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .homepage-content {
+        height: auto;
+        padding: 20px;
+    }
+
+    .homepage-picture img {
+        width: 150px;
+        height: 150px;
+    }
+
+    .audio-player {
+        width: 90%;
+    }
+}
