@@ -56,6 +56,21 @@ table th {
     background-color: #f2f2f2;
 }
 
+/* Video Container */
+.video-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    border: 5px solid #333;  /* Border around the video */
+    padding: 10px;
+    border-radius: 8px;
+}
+
+.video-container video {
+    border-radius: 8px;
+}
+
 /* Gallery styling */
 .gallery {
     display: grid;
